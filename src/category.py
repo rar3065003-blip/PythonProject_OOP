@@ -8,12 +8,12 @@ class Category:
     category_count = 0
     product_count = 0
 
-    def __init__(self, name: str, description: str, __products: list) -> None:
+    def __init__(self, name: str, description: str, products: list) -> None:
         self.name = name
         self.description = description
-        self.__products = __products
+        self.__products = products
         Category.category_count += 1
-        Category.product_count += len(__products)
+        Category.product_count += len(products)
 
     def add_product(self, product) -> None:
         self.__products.append(product)
@@ -24,7 +24,7 @@ class Category:
         """Возвращает форматированную строку с информацией о продуктах"""
         products_list = ""
         for product in self.__products:
-            products_list += f"Название продукта: {product.name}, {product._price} руб. Остаток: {product.quantity} шт.\n"
+            products_list += f"Название продукта: {product.name}, {product.price} руб. Остаток: {product.quantity} шт.\n"
         return products_list
 
     @products.setter
