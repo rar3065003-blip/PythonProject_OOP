@@ -24,7 +24,7 @@ class Category:
         """Возвращает форматированную строку с информацией о продуктах"""
         products_list = ""
         for product in self.__products:
-            products_list += f"Название продукта: {product.name}, {product.price} руб. Остаток: {product.quantity} шт.\n"
+            products_list += f"Название продукта: {product.name}, {product._price} руб. Остаток: {product.quantity} шт.\n"
         return products_list
 
     @products.setter
