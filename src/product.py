@@ -37,9 +37,23 @@ class Product:
         return float(self.__price)
 
     @price.setter
-    def price(self, value):
+    def price(self, value:float)-> None:
         """Возвращает строку с ценой или сообщением об ошибке"""
         if value <= 0:
             print("Цена не должна быть нулевой или отрицательной")
             return
         self.__price = value
+
+    def check_change_price(self, new_price:float) -> float | None:
+        """Изменение цены в случае ее понижения с согласия пользователя"""
+        if self.price != new_price:
+            user_confirmed = input("Вы уверены, что хотите изменить цену? (y/n):")
+            if user_confirmed == "y":
+                self.price = new_price
+                return self.price
+            if user_confirmed == "n":
+                return self.price
+            return None
+        else:
+            return self.price
+

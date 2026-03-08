@@ -37,3 +37,8 @@ if __name__ == "__main__":
     print(new_product.price)
     new_product.price = 0
     print(new_product.price)
+
+    print(Product("Смартфон", "Описание", 5654600, 10).check_change_price(156846286))
+
+
+
