@@ -20,7 +20,7 @@ class Category:
         Category.product_count += 1
 
     @property
-    def products(self) -> str:
+    def products(self) -> list[Product]:
         """Возвращает форматированную строку с информацией о продуктах"""
         products_list = ""
         for product in self.__products:
