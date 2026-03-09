@@ -15,12 +15,12 @@ class Category:
         Category.category_count += 1
         Category.product_count += len(products)
 
-    def add_product(self, product) -> None:
+    def add_product(self, product:Product) -> None:
         self.__products.append(product)
         Category.product_count += 1
 
     @property
-    def products(self) -> list[Product]:
+    def products(self) -> list:
         """Возвращает форматированную строку с информацией о продуктах"""
         products_list = ""
         for product in self.__products:
@@ -28,7 +28,7 @@ class Category:
         return products_list
 
     @products.setter
-    def products(self, new_products: list[Product]) -> None:
+    def products(self, new_products: str) -> None:
         """Добавляет новые продукты в категорию и обновляет счётчик"""
         for product in new_products:
             self.__products.append(product)
