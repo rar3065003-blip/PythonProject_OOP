@@ -17,6 +17,7 @@ class Product:
 
     @classmethod
     def new_product(cls, product_data:dict, product_list:list) -> 'Product':
+        """Принимает вход параметры товара в словаре и возвращать созданный объект класса"""
         for existing_product in product_list:
             if existing_product.name == product_data['name']:
                 if product_data['price'] > existing_product.__price:
