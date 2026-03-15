@@ -9,6 +9,10 @@ class Product:
         self.__price = price
         self.quantity = quantity
 
+    def __str__(self) -> str:
+        """Возврат форматированной строки характеристик товара"""
+        return f"{self.name}, {self.price} руб. Остаток: {self.quantity} шт."
+
     @classmethod
     def new_product(cls, product_data: dict, product_list: List["Product"]) -> "Product":
         """Принимает вход параметры товара в словаре и возвращать созданный объект класса"""
@@ -51,3 +55,8 @@ class Product:
             return None
         else:
             return self.price
+
+    def __add__(self, other: "Product") -> float:
+        """Складываем все товары одного типа и получаем стоимость товара типа на складе"""
+
+        return self.price * self.quantity + other.price * other.quantity

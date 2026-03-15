@@ -1,3 +1,5 @@
+from unittest.mock import patch
+
 from _pytest.capture import CaptureFixture
 
 from src.product import Product
@@ -71,3 +73,51 @@ def test_update_existing_product_higher_price() -> None:
     assert result.price == 300000.0
     assert result.quantity == 4
     assert result.description != "Обновлённое описание"
+
+
+def test___str__() -> None:
+    product_1 = Product("Samsung Galaxy S23 Ultra", "256GB, Серый цвет, 200MP камера", 180000.0, 5)
+    product_2 = Product("Samsung Galaxy S24 Ultra", "250GB, Серый цвет, 210MP камера", 1800.0, 1)
+    assert str(product_1) == "Samsung Galaxy S23 Ultra, 180000.0 руб. Остаток: 5 шт."
+    assert str(product_2) == "Samsung Galaxy S24 Ultra, 1800.0 руб. Остаток: 1 шт."
+
+
+def test___add__() -> None:
+    product_1 = Product("Samsung Galaxy S23 Ultra", "256GB, Серый цвет, 200MP камера", 180000.0, 5)
+    product_2 = Product("Samsung Galaxy S24 Ultra", "250GB, Серый цвет, 210MP камера", 1800.0, 1)
+    result = product_1.price + product_2.price
+    assert result == 181800.0
+
+
+def test___add__zero() -> None:
+    product_1 = Product("Samsung Galaxy S23 Ultra", "256GB, Серый цвет, 200MP камера", 180000.0, 0)
+    product_2 = Product("Samsung Galaxy S24 Ultra", "250GB, Серый цвет, 210MP камера", 0.0, 1)
+    result = product_1 + product_2
+    assert result == 0.0
+
+
+def test_check_change_price_yes() -> None:
+    product = Product("Товар", "Описание", 100.0, 5)
+    with patch("builtins.input") as mock_input:
+        mock_input.return_value = "y"
+        result = product.check_change_price(80.0)
+        assert result == 80.0
+        assert product.price == 80.0
+
+
+def test_check_change_price_no() -> None:
+    product = Product("Товар", "Описание", 100.0, 5)
+    with patch("builtins.input") as mock_input:
+        mock_input.return_value = "n"
+        result = product.check_change_price(80.0)
+        assert result == 100.0
+        assert product.price == 100.0
+
+
+def test_check_change_price_maybe() -> None:
+    product = Product("Товар", "Описание", 100.0, 5)
+    with patch("builtins.input") as mock_input:
+        mock_input.return_value = "maybe"
+        result = product.check_change_price(80.0)
+        assert result is None
+        assert product.price == 100.0
