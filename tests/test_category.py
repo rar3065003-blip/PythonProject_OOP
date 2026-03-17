@@ -3,14 +3,11 @@ from src.product import Product
 
 """Тестирование категорий свойств продуктов"""
 def test_category_init(
-    category_characters_1: Category,
-        category_characters_2: Category,
-        category_characters_3: Category
+    category_characters_1: Category, category_characters_2: Category, category_characters_3: Category
 ) -> None:
     assert category_characters_1.name == "Смартфоны"
     assert category_characters_1.description == (
-        "Смартфоны, как средство не только коммуникации,"
-        " но и получения дополнительных функций для удобства жизни"
+        "Смартфоны, как средство не только коммуникации," " но и получения дополнительных функций для удобства жизни"
     )
     assert category_characters_1.products == ""
     assert Category.category_count == 3
@@ -38,15 +35,9 @@ def test_products() -> None:
     updated_count = category.product_count
     result = category.products
     assert updated_count == 1
-    assert result == "Название продукта: Na_kolenke_sobrano, 250.0 руб. Остаток: 5 шт.\n"
+    assert result == "Na_kolenke_sobrano, 250.0 руб. Остаток: 5 шт.\n"
 
 
-# def test_setter() -> None:
-#     Category.product_count = 0
-#     category = Category(name="kolenka", description=" ", products=[])
-#
-#     product = Product(name="Na_kolenke", description=" ", price=250.0, quantity=5)
-#
-#     category.products = [product]
-#
-#     assert category.products[0] == product
+def test___str__(category_characters_1: Category) -> None:
+
+    assert str(category_characters_1) == "Смартфоны, количество продуктов: 0 шт."

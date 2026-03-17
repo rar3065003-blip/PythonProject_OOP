@@ -18,8 +18,7 @@ if __name__ == "__main__":
     print(category1.products)
     print(category1.product_count)
 
-    existing_products_list = [
-        Product("Samsung Galaxy S23 Ultra", "256GB, Серый цвет, 200MP камера", 200000.0, 5)]
+    existing_products_list = [Product("Samsung Galaxy S23 Ultra", "256GB, Серый цвет, 200MP камера", 200000.0, 5)]
 
     new_product = Product.new_product(
         {
