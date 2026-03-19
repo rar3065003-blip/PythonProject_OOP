@@ -2,6 +2,8 @@ from src.category import Category
 from src.product import Product
 
 """Тестирование категорий свойств продуктов"""
+
+
 def test_category_init(
     category_characters_1: Category, category_characters_2: Category, category_characters_3: Category
 ) -> None:
