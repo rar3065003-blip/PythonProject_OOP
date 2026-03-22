@@ -58,5 +58,6 @@ class Product:
 
     def __add__(self, other: "Product") -> float:
         """Складываем все товары одного типа и получаем стоимость товара типа на складе"""
-
-        return self.price * self.quantity + other.price * other.quantity
+        if type(other) is Product:
+            return self.price * self.quantity + other.price * other.quantity
+        raise TypeError

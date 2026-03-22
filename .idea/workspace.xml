@@ -4,17 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="709101da-4213-4393-b83c-8414e10c4c7c" name="Changes" comment="complite all внес поправки 3">
-      <change afterPath="$PROJECT_DIR$/main_15_1.py" afterDir="false" />
+    <list default="true" id="709101da-4213-4393-b83c-8414e10c4c7c" name="Changes" comment="complite all 15.1">
       <change beforePath="$PROJECT_DIR$/.coverage" beforeDir="false" afterPath="$PROJECT_DIR$/.coverage" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_05_03_2026_21_56_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_05_03_2026_21_56__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/14.2_main.py" beforeDir="false" afterPath="$PROJECT_DIR$/14.2_main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/category.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/category.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/product.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/product.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_category.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_category.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_product.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_product.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,7 +23,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="develop/future_14_2" />
+        <entry key="$PROJECT_DIR$" value="develop/future_15_1" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -59,53 +51,53 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "Python tests.Python tests for test_category.test___add__.executor": "Run",
-    "Python tests.Python tests for test_category.test___add__zero.executor": "Run",
-    "Python tests.Python tests for test_category.test___str__.executor": "Run",
-    "Python tests.Python tests for test_category.test_add_product.executor": "Run",
-    "Python tests.Python tests for test_category.test_category_init.executor": "Run",
-    "Python tests.Python tests for test_category.test_check_change_price.executor": "Run",
-    "Python tests.Python tests for test_category.test_check_change_price_maybe.executor": "Run",
-    "Python tests.Python tests for test_category.test_check_change_price_no.executor": "Run",
-    "Python tests.Python tests for test_category.test_products.executor": "Run",
-    "Python tests.Python tests for test_category.test_setter.executor": "Run",
-    "Python tests.Python tests for test_product.test___add__.executor": "Run",
-    "Python tests.Python tests for test_product.test___add__zero.executor": "Run",
-    "Python tests.Python tests for test_product.test___str__.executor": "Run",
-    "Python tests.Python tests for test_product.test_check_change_price.executor": "Run",
-    "Python tests.Python tests for test_product.test_check_change_price_maybe.executor": "Run",
-    "Python tests.Python tests for test_product.test_check_change_price_no.executor": "Run",
-    "Python tests.Python tests for test_product.test_check_change_price_yes.executor": "Run",
-    "Python tests.Python tests for test_product.test_create_new_product.executor": "Run",
-    "Python tests.Python tests for test_product.test_new_product.executor": "Run",
-    "Python tests.Python tests for test_product.test_price.executor": "Run",
-    "Python tests.Python tests for test_product.test_price_not_changed_when_same_price.executor": "Run",
-    "Python tests.Python tests for test_product.test_price_setter_negative_value.executor": "Run",
-    "Python tests.Python tests for test_product.test_price_setter_valid_value.executor": "Run",
-    "Python tests.Python tests for test_product.test_price_setter_zero_value.executor": "Run",
-    "Python tests.Python tests for test_product.test_product_init.executor": "Run",
-    "Python tests.Python tests for test_product.test_update_existing_product_higher_price.executor": "Run",
-    "Python tests.Python tests for test_product.test_user_cancels_price_change.executor": "Run",
-    "Python tests.Python tests for test_product.test_user_confirms_price_change.executor": "Run",
-    "Python tests.Python tests for test_product_category.test_category_init.executor": "Run",
-    "Python tests.Python tests for test_product_category.test_product_init.executor": "Run",
-    "Python tests.Python tests for test_utils.test_read_json.executor": "Run",
-    "Python.14.2_main.executor": "Run",
-    "Python.main.executor": "Run",
-    "Python.main_15_1.executor": "Run",
-    "Python.product.executor": "Run",
-    "Python.utils.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "develop/future__15__1",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/PythonProject_OOP/data",
-    "settings.editor.selected.configurable": "preferences.fileTypes"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Python tests.Python tests for test_category.test___add__.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_category.test___add__zero.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_category.test___str__.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_category.test_add_product.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_category.test_category_init.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_category.test_check_change_price.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_category.test_check_change_price_maybe.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_category.test_check_change_price_no.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_category.test_products.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_category.test_setter.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_product.test___add__.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_product.test___add__zero.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_product.test___str__.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_product.test_check_change_price.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_product.test_check_change_price_maybe.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_product.test_check_change_price_no.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_product.test_check_change_price_yes.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_product.test_create_new_product.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_product.test_new_product.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_product.test_price.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_product.test_price_not_changed_when_same_price.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_product.test_price_setter_negative_value.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_product.test_price_setter_valid_value.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_product.test_price_setter_zero_value.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_product.test_product_init.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_product.test_update_existing_product_higher_price.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_product.test_user_cancels_price_change.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_product.test_user_confirms_price_change.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_product_category.test_category_init.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_product_category.test_product_init.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_utils.test_read_json.executor&quot;: &quot;Run&quot;,
+    &quot;Python.14.2_main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main_15_1.executor&quot;: &quot;Run&quot;,
+    &quot;Python.product.executor&quot;: &quot;Run&quot;,
+    &quot;Python.utils.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;develop/future__develop&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/PythonProject_OOP/data&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.fileTypes&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\PythonProject_OOP\data" />
@@ -287,7 +279,15 @@
       <option name="project" value="LOCAL" />
       <updated>1773241426573</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="complite all 15.1">
+      <option name="closed" value="true" />
+      <created>1773580572656</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1773580572656</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -324,7 +324,8 @@
     <MESSAGE value="complite all внес поправки" />
     <MESSAGE value="complite all внес поправки 2" />
     <MESSAGE value="complite all внес поправки 3" />
-    <option name="LAST_COMMIT_MESSAGE" value="complite all внес поправки 3" />
+    <MESSAGE value="complite all 15.1" />
+    <option name="LAST_COMMIT_MESSAGE" value="complite all 15.1" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

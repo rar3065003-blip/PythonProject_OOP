@@ -1,7 +1,11 @@
+from black import Any
+
 from src.product import Product
 
 
 class Category:
+    """Родительский класс"""
+
     category_count = 0
     product_count = 0
 
@@ -19,10 +23,13 @@ class Category:
             product_summ += product.quantity
         return f"{self.name}, количество продуктов: {product_summ} шт."
 
-    def add_product(self, product: Product) -> None:
+    def add_product(self, product: Product|Any) -> None:
         """Добавляем новый продукт"""
-        self.__products.append(product)
-        Category.product_count += 1
+        if isinstance(product, Product):
+            self.__products.append(product)
+            Category.product_count += 1
+        else:
+            raise TypeError
 
     @property
     def products(self) -> str:
