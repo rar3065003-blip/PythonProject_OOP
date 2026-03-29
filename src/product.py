@@ -1,7 +1,9 @@
 from typing import List
 
+from src.BaseProduct import BaseProduct
 
-class Product:
+
+class Product(BaseProduct):
 
     def __init__(self, name: str, description: str, price: float, quantity: int) -> None:
         self.name = name
