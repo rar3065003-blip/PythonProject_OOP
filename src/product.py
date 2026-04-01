@@ -1,15 +1,16 @@
+from src.print_mixin import PrintMixin
 from typing import List
+from src.BaseProduct_module import BaseProduct
 
-from src.BaseProduct import BaseProduct
 
-
-class Product(BaseProduct):
+class Product(PrintMixin, BaseProduct):
 
     def __init__(self, name: str, description: str, price: float, quantity: int) -> None:
         self.name = name
         self.description = description
         self.__price = price
         self.quantity = quantity
+        super().__init__()
 
     def __str__(self) -> str:
         """Возврат форматированной строки характеристик товара"""

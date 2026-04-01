@@ -1,9 +1,9 @@
 from black import Any
-
+from src.print_mixin import PrintMixin
 from src.product import Product
 
 
-class Category:
+class Category(PrintMixin):
     """Родительский класс"""
 
     category_count = 0
@@ -15,6 +15,7 @@ class Category:
         self.__products = products
         Category.category_count += 1
         Category.product_count += len(products)
+        super().__init__()
 
     def __str__(self) -> str:
         """Оптимизирую возврат строкового отображения товаров"""
@@ -23,7 +24,7 @@ class Category:
             product_summ += product.quantity
         return f"{self.name}, количество продуктов: {product_summ} шт."
 
-    def add_product(self, product: Product|Any) -> None:
+    def add_product(self, product: Product | Any) -> None:
         """Добавляем новый продукт"""
         if isinstance(product, Product):
             self.__products.append(product)
