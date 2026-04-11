@@ -9,6 +9,7 @@ class Category(PrintMixin):
 
     category_count = 0
     product_count = 0
+    middle_price = 0.0
 
     def __init__(self, name: str, description: str, products: list[Product], should_print: bool = False) -> None:
         self.name = name
