@@ -1,4 +1,5 @@
 from black import Any
+
 from src.print_mixin import PrintMixin
 from src.product import Product
 
@@ -9,14 +10,14 @@ class Category(PrintMixin):
     category_count = 0
     product_count = 0
 
-    def __init__(self, name: str, description: str, products: list[Product], should_print=False) -> None:
+    def __init__(self, name: str, description: str, products: list[Product], should_print: bool = False) -> None:
         self.name = name
         self.description = description
         self.__products = products
-        self.should_print=should_print
+        self.should_print = should_print
         Category.category_count += 1
         Category.product_count += len(products)
-        super().__init__(should_print=should_print)
+        super().__init__(should_print = should_print)
 
     def __str__(self) -> str:
         """Оптимизирую возврат строкового отображения товаров"""
@@ -48,13 +49,9 @@ class Category(PrintMixin):
             self.__products.append(product)
             Category.product_count += 1
 
-
-    def middle_price_all_product(self):
+    def middle_price_all_product(self) -> float:
         """Возвращает средний ценник всех товаров"""
         try:
             return sum([product.price for product in self.__products]) / len(self.__products)
         except ZeroDivisionError:
             return 0
-
-
-

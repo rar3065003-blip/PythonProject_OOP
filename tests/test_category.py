@@ -43,3 +43,8 @@ def test_products() -> None:
 def test___str__(category_characters_1: Category) -> None:
 
     assert str(category_characters_1) == "Смартфоны, количество продуктов: 0 шт."
+
+
+def test_middle_price_all_product(product_wo_quantity: Category, category_middle_amount: Category) -> None:
+    assert product_wo_quantity.middle_price_all_product() == 0
+    assert category_middle_amount.middle_price_all_product() == 110600.0

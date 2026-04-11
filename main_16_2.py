@@ -37,7 +37,8 @@ if __name__ == "__main__":
     category2 = Category(
         "Телевизоры",
         "Современный телевизор, который позволяет наслаждаться просмотром, станет вашим другом и помощником",
-        [product4], should_print=False
+        [product4],
+        should_print=False,
     )
 
     print(category2.name)
@@ -53,6 +54,7 @@ if __name__ == "__main__":
     category3 = Category(
         "Телевизоры",
         "Современный телевизор, который позволяет наслаждаться просмотром, станет вашим другом и помощником",
-        [],should_print=False
+        [],
+        should_print=False,
     )
     print(category3.middle_price_all_product())
