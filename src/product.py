@@ -1,12 +1,15 @@
-from src.print_mixin import PrintMixin
+from abc import ABC
+from abc import abstractmethod
 from typing import List
-from abc import ABC, abstractmethod
+
+from src.print_mixin import PrintMixin
+
 
 class BaseProduct(ABC):
 
     @classmethod
     @abstractmethod
-    def new_product(cls, product_data: dict, product_list: list['Product']) -> 'Product':
+    def new_product(cls, product_data: dict, product_list: list["Product"]) -> "Product":
         pass
 
     @property
@@ -24,8 +27,9 @@ class BaseProduct(ABC):
         pass
 
     @abstractmethod
-    def __add__(self, other: 'Product') -> float:
+    def __add__(self, other: "Product") -> float:
         pass
+
 
 class Product(PrintMixin, BaseProduct):
 
@@ -33,7 +37,10 @@ class Product(PrintMixin, BaseProduct):
         self.name = name
         self.description = description
         self.__price = price
-        self.quantity = quantity
+        if quantity > 0:
+            self.quantity = quantity
+        else:
+            raise ValueError("Товар с нулевым количеством не может быть добавлен")
         super().__init__()
 
     def __str__(self) -> str:

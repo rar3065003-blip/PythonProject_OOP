@@ -1,5 +1,6 @@
 from unittest.mock import patch
 
+import pytest
 from _pytest.capture import CaptureFixture
 
 from src.product import Product
@@ -90,10 +91,10 @@ def test___add__() -> None:
 
 
 def test___add__zero() -> None:
-    product_1 = Product("Samsung Galaxy S23 Ultra", "256GB, Серый цвет, 200MP камера", 180000.0, 0)
+    product_1 = Product("Samsung Galaxy S23 Ultra", "256GB, Серый цвет, 200MP камера", 180000.0, 1)
     product_2 = Product("Samsung Galaxy S24 Ultra", "250GB, Серый цвет, 210MP камера", 0.0, 1)
     result = product_1 + product_2
-    assert result == 0.0
+    assert result == 180000.0
 
 
 def test_check_change_price_yes() -> None:
@@ -121,3 +122,8 @@ def test_check_change_price_maybe() -> None:
         result = product.check_change_price(80.0)
         assert result is None
         assert product.price == 100.0
+
+
+def test_product_with_zero_quantity() -> None:
+    with pytest.raises(ValueError, match="Товар с нулевым количеством не может быть добавлен"):
+        Product(name="Gnusmas", description="Чо-то там за телефончик", price=10.0, quantity=0)

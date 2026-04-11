@@ -43,23 +43,53 @@ def category_characters_3() -> Category:
     )
 
 
-@pytest.fixture()
+@pytest.fixture
 def lawngrass_1() -> LawnGrass:
     return LawnGrass("Газонная трава", "Элитная трава для газона", 500.0, 20, "Россия", "7 дней", "Зеленый")
 
 
-@pytest.fixture()
+@pytest.fixture
 def lawngrass_2() -> LawnGrass:
     return LawnGrass("Газонная трава 2", "Выносливая трава", 450.0, 15, "США", "5 дней", "Темно-зеленый")
 
 
-@pytest.fixture()
+@pytest.fixture
 def smartphone_1() -> Smartphone:
     return Smartphone(
         "Samsung Galaxy S23 Ultra", "256GB, Серый цвет, 200MP камера", 180000.0, 5, 95.5, "S23 Ultra", 256, "Серый"
     )
 
 
-@pytest.fixture()
+@pytest.fixture
 def smartphone_2() -> Smartphone:
     return Smartphone("Iphone 15", "512GB, Gray space", 210000.0, 8, 98.2, "15", 512, "Gray space")
+
+
+@pytest.fixture
+def product_wo_quantity() -> Category:
+    return Category(
+        "Смартфоны",
+        "Смартфоны, как средство не только коммуникации, но и получения дополнительных функций для удобства жизни",
+        [],
+    )
+
+
+@pytest.fixture
+def category_middle_amount() -> Category:
+    return Category(
+        "Смартфоны",
+        "Смартфоны, как средство не только коммуникации, но и получения дополнительных функций для удобства жизни",
+        [
+            Product("Samsung Galaxy S23 Ultra", "256GB, Серый цвет, 200MP камера", 180000.0, 5),
+            Product("new Samsung Galaxy S23 Ultra", "256GB, Серый цвет, 200MP камера", 150000.0, 3),
+            Product("old Samsung Galaxy S23 Ultra", "256GB, Серый цвет, 200MP камера", 1800.0, 5),
+        ],
+        should_print=False,
+    )
+
+
+@pytest.fixture()
+def product_empty_quantity() -> Product:
+    return Product(
+        name="Samsung Galaxy S23 Ultra", description="256GB, Серый цвет, 200MP камера", price=180000.0, quantity=0
+    )
